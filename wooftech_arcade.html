@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WoofTech Arcade System</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: monospace;
+      padding: 20px;
+      font-size: 16px;
+    }
+    .terminal {
+      white-space: pre;
+      border: 2px solid #00ff00;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    .blink {
+      animation: blink 1s step-start infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal" id="terminal">
+    WoofTech™ Arcade Emulated System v1.3\n
+    ---------------------------------------\n
+    Initializing RAM... OK\n
+    Checking video system... OK\n
+    Booting into Arcade Mode...\n
+    \n
+    Available Games:\n
+    [1] RuffRacer 1989\n
+    [2] Bone Blaster 2000\n
+    [3] Doggo Kart '98\n
+    [4] Quit\n
+    \n
+    Select a game by number:
+    <span class="blink">█</span>
+  </div>
+
+  <script>
+    document.addEventListener('keydown', function(e) {
+      const term = document.getElementById('terminal');
+      if (e.key === "1") {
+        term.innerText += "\nLoading RuffRacer 1989...\n>>> Loading ROM...\n>>> Emulated CPU engaged.\n\nHave fun!\n";
+      } else if (e.key === "2") {
+        term.innerText += "\nBooting Bone Blaster 2000...\n>>> Sound chip loaded.\n>>> INSERT COIN.\n";
+      } else if (e.key === "3") {
+        term.innerText += "\nLaunching Doggo Kart '98...\n>>> Turbo Mode: ENABLED\n>>> WoofTech Racing Engine Active.\n";
+      } else if (e.key === "4") {
+        term.innerText += "\nShutting down arcade system...\n>>> Goodbye.\n";
+      }
+    });
+  </script>
+</body>
+</html>
