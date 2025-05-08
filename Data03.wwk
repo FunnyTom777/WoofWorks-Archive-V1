@@ -1,0 +1,57 @@
+[HEADER]
+WoofWorks Mega Compute System v.3.4.9
+Boot Time: 04/07/1993 13:12:47
+System Online: Fully operational
+Model: WoofWare Mega 5000X
+Storage: 100TB (Total); 48TB Free
+Status: SYSTEM IDLE
+
+[INIT SEQUENCE]
+-- Boot process initiated
+-- Memory: 64MB RAM @ 66MHz
+-- Processor: CanineX 9000 CPU
+-- Primary System: WoofOS 3.4
+-- Diagnostics: OK
+
+[ERROR LOG]
+04/07/1993 13:13:02 - ERROR: [#W013] – Data corruption in D-Drive.
+04/07/1993 13:13:05 - WARNING: [#W016] – High heat detected in Data Processing Core. Temperature: 75°C (Critical threshold: 80°C)
+04/07/1993 13:13:10 - WARNING: [#W029] – Unknown frequency spike in Subsonic Audio Processor. Unknown source.
+04/07/1993 13:13:15 - ERROR: [#W042] – Self-diagnostic failure. Component #D3: Missing signature files.
+
+[USER INPUT: SYSTEM QUERY]
+> Please enter command: ____________________________________________________________________________
+> 
+> Accessing archived data... Searching for "WoofTech Origins"...
+> Found 1 result.
+> 
+> Would you like to continue? [Y/N]
+
+[WOOFOS COMMAND LOG]
+> Entered command: "RETRIEVE_WOOFTECH_ORIGINS"
+> Retrieving data... 93% complete
+> Data decrypted: Complete
+> Displaying content...
+
+[DATA OUTPUT: WoofWorks Mega System Origins]
+Title: The Rise of WoofWorks Mega Compute System
+Date: 1984
+Summary:
+    The WoofWorks Mega Compute System, originally designed for space-bound calculations and top-secret doggy analytics, was
+    born from an ambitious project started in 1984. Its initial purpose was to calculate the optimal trajectory for dog
+    satellite launches. Later repurposed for advanced canine AI research, the Mega Compute System became integral to WoofWorks'
+    early advancements in machine learning. However, rumors persist about a "lost component" within the system—an
+    intelligence file referred to as "Project Barkwave." This file was said to be so advanced that it could predict canine
+    behavior with alarming accuracy, possibly surpassing even WoofWorks' highest expectations...
+
+[SYSTEM WARNING: SHUTDOWN SEQUENCE INITIATED]
+> System error detected. Immediate shutdown required.
+> Please stand by...
+
+[END OF FILE]
+
+[FILES IN THIS DIRECTORY]
+- `System Logs.wwk`
+- `Project Barkwave.wwk` (Hidden, Decrypt Key Required)
+- `WoofOS System Manual.pdf` (Corrupted)
+- `Mega Compute Blueprints.wwk`

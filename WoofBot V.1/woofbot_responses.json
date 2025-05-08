@@ -1,0 +1,52 @@
+{
+    "greetings": [
+        {
+            "text": "Woof! How can I assist you today?",
+            "intent": "Greeting"
+        },
+        {
+            "text": "Bark! I'm here to help! What do you need?",
+            "intent": "Greeting"
+        }
+    ],
+    "farewells": [
+        {
+            "text": "Goodbye and have a pawsome day!",
+            "intent": "Farewell"
+        },
+        {
+            "text": "See you soon, take care!",
+            "intent": "Farewell"
+        }
+    ],
+    "dog_facts": [
+        {
+            "text": "Dogs have a sense of smell that is 10,000 to 100,000 times better than humans.",
+            "intent": "Dog Fact"
+        },
+        {
+            "text": "The average lifespan for a dog depends on its breed, but most dogs live between 10 and 13 years.",
+            "intent": "Dog Fact"
+        }
+    ],
+    "commands": {
+        "help": [
+            {
+                "text": "Here are some things I can assist with:",
+                "intent": "Help"
+            },
+            {
+                "text": "1. Greetings",
+                "intent": "Greeting"
+            },
+            {
+                "text": "2. Farewells",
+                "intent": "Farewell"
+            },
+            {
+                "text": "3. Fun facts about dogs",
+                "intent": "Dog Fact"
+            }
+        ]
+    }
+}

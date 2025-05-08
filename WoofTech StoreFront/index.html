@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WoofTech Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .card:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white min-h-screen">
+
+  <!-- Top Bar -->
+  <header class="flex flex-col md:flex-row md:items-center justify-between bg-gray-800 p-4 space-y-3 md:space-y-0">
+    <div class="text-2xl font-bold text-blue-400">WOOFTECH</div>
+    <nav class="space-x-4 hidden md:flex">
+      <a href="#" class="hover:text-blue-400">Store</a>
+      <a href="#" class="hover:text-blue-400">Community</a>
+      <a href="#" class="hover:text-blue-400">About</a>
+      <a href="#" class="hover:text-blue-400">Support</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <input id="searchBar" type="text" placeholder="Search WoofTech" class="px-2 py-1 rounded bg-gray-700 text-white border border-gray-600" oninput="filterProjects()"/>
+      <button onclick="alert('Launching WoofTech... 🐾')" class="bg-green-600 hover:bg-green-700 px-3 py-1 rounded">Install WoofTech</button>
+    </div>
+  </header>
+
+  <main class="flex">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-gray-800 p-4 border-r border-gray-700 space-y-6 hidden md:block">
+      <div class="bg-blue-500 text-white p-3 rounded-lg text-center">
+        <p class="font-bold">WOOFTECH GIFT CARDS</p>
+        <p class="text-sm">Give the gift of innovation!</p>
+      </div>
+
+      <div>
+        <h2 class="font-bold mb-2 cursor-pointer" onclick="toggleSection('categories')">Browse Categories ▼</h2>
+        <ul id="categories" class="space-y-1 text-sm">
+          <li><a href="#" class="hover:text-blue-400">Top Sellers</a></li>
+          <li><a href="#" class="hover:text-blue-400">New Projects</a></li>
+          <li><a href="#" class="hover:text-blue-400">Specials</a></li>
+          <li><a href="#" class="hover:text-blue-400">VR Compatible</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-bold mb-2 cursor-pointer" onclick="toggleSection('genres')">Genres ▼</h2>
+        <ul id="genres" class="space-y-1 text-sm">
+          <li><a href="#" class="hover:text-blue-400">Simulation</a></li>
+          <li><a href="#" class="hover:text-blue-400">Utilities</a></li>
+          <li><a href="#" class="hover:text-blue-400">Experimental</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <section class="flex-1 p-6 space-y-8">
+
+      <!-- Featured Projects -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">Featured & Recommended</h2>
+        <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- JS will inject project cards here -->
+        </div>
+      </div>
+
+      <!-- WoofTech Picks -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">WoofTech Picks</h2>
+        <div class="bg-yellow-500 text-black p-4 rounded-lg">
+          <h3 class="font-bold text-lg mb-2">Fellow Traveller Bundle</h3>
+          <p class="text-sm">A collection of quirky, narrative-driven experiences by WoofTech friends!</p>
+        </div>
+      </div>
+
+      <!-- Special Offers -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">Special Offers</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-gray-700 p-3 rounded-lg card cursor-pointer hover:bg-gray-600" onclick="alert('Viewing THING™')">
+            <img src="https://via.placeholder.com/150x100?text=THING" class="rounded mb-1 transition-transform duration-200">
+            <p class="text-sm font-semibold">THING™ Card Game</p>
+          </div>
+          <div class="bg-gray-700 p-3 rounded-lg card cursor-pointer hover:bg-gray-600" onclick="alert('Viewing Barkipelago Adventures')">
+            <img src="https://via.placeholder.com/150x100?text=Barkipelago" class="rounded mb-1 transition-transform duration-200">
+            <p class="text-sm font-semibold">Barkipelago Adventures</p>
+          </div>
+          <div class="bg-gray-700 p-3 rounded-lg card cursor-pointer hover:bg-gray-600" onclick="alert('Viewing QIIEI ACS')">
+            <img src="https://via.placeholder.com/150x100?text=ACS+System" class="rounded mb-1 transition-transform duration-200">
+            <p class="text-sm font-semibold">QIIEI ACS System</p>
+          </div>
+          <div class="bg-gray-700 p-3 rounded-lg card cursor-pointer hover:bg-gray-600" onclick="alert('Viewing Great Doggy War')">
+            <img src="https://via.placeholder.com/150x100?text=Great+Doggy+War" class="rounded mb-1 transition-transform duration-200">
+            <p class="text-sm font-semibold">Great Doggy War</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-center text-gray-400 text-sm p-4 mt-8">
+    © 2025 WoofTech Corporation. Woof responsibly. 🐾
+  </footer>
+
+  <!-- JS Scripts -->
+  <script>
+    const projects = [
+      { title: "Project Rover", desc: "Explore Mars with robotics!", image: "https://via.placeholder.com/300x150?text=Project+Rover" },
+      { title: "Quantum OS", desc: "A Linux OS with bite.", image: "https://via.placeholder.com/300x150?text=Quantum+OS" },
+      { title: "Milk Toast TACO!", desc: "Drive, dig, drift, deliver.", image: "https://via.placeholder.com/300x150?text=MTT+Simulator" }
+    ];
+
+    function renderProjects(filter = '') {
+      const grid = document.getElementById("projectGrid");
+      grid.innerHTML = '';
+      projects
+        .filter(p => p.title.toLowerCase().includes(filter.toLowerCase()))
+        .forEach(p => {
+          const card = document.createElement('div');
+          card.className = "bg-gray-700 p-4 rounded-lg card hover:bg-gray-600 transition";
+          card.innerHTML = `
+            <img src="${p.image}" alt="${p.title}" class="rounded mb-2 transition-transform duration-200">
+            <h3 class="font-semibold">${p.title}</h3>
+            <p class="text-sm text-gray-300">${p.desc}</p>`;
+          card.onclick = () => alert(`Opening "${p.title}"...`);
+          grid.appendChild(card);
+        });
+    }
+
+    function filterProjects() {
+      const input = document.getElementById("searchBar").value;
+      renderProjects(input);
+    }
+
+    function toggleSection(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+
+    // Initial render
+    renderProjects();
+  </script>
+
+</body>
+</html>
